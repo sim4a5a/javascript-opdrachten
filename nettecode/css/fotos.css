@@ -1,0 +1,39 @@
+.gallery {
+    padding: 0;
+}
+
+.gallery li {
+    list-style-type: none;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery figure {
+    background: #999;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.gallery figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.gallery figcaption {
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+.gallery figure {
+    transition: transform 1s 0s linear;
+    transform: rotate(5deg);
+}
+
+.gallery figure:hover {
+    transition: transform 0.5s 0s linear;
+    transform: rotate(-30deg);
+}
