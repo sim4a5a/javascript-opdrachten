@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+var result1 = factorial(5);
+console.log(result1); // === 120
+
+var result2 = factorial(8);
+console.log(result2); // === 40320
+
+var result3 = factorial(1);
+console.log(result3); // === 1
+
+var result4 = factorial(0);
+console.log(result4); // === 1
+
+var result5 = factorial(-1);
+console.log(result5); // === 'Gamma-functie niet gedefiniëerd voor negatieve getallen'
+
+
+function factorial(number) {
+  var uitkomst;
+ //als het nummer niet negatief is of als het niet nul is
+  if (number > 0) {
+    for (var i = number; i > 0; i--) {
+      if(i === number) {
+        uitkomst = number;
+      } else {
+        uitkomst = uitkomst * i;
+      }
+    }
+    return (uitkomst);
+
+  } else if(number ===  0) {
+    return (1);
+
+  } else {
+    return ("error");
+  }
+
+}
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
