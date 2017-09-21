@@ -16,15 +16,11 @@ if(isset($_FILES['image'])){
     $errors="extension not allowed, please choose a JPEG or PNG file.";
   }
   if(empty($errors)===true){
-    var_dump($file_tmp);
-    var_dump($file_name);
     move_uploaded_file($file_tmp,"images/".$file_name);
     echo "Success";
   } else{
     print_r($errors);
   }
-
-
 }
 
 ?>
@@ -34,13 +30,12 @@ if(isset($_FILES['image'])){
 <input type="submit" name="image"/>
 </form>
 
-<ul>
+      <ul>
           <li>File name:<?php echo $_FILES["image"]["name"] ?></li>
           <li>File size:<?php echo $_FILES["image"]["size"] ?></li>
       </ul>
 <?php
 echo '<img src="images/' .$_FILES["image"]["name"]  .'" width = "150" height=150>';
-
- ?>
+?>
 
 </html>
