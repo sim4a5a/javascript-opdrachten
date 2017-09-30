@@ -1,0 +1,206 @@
+body {
+    color: #666;
+    background-color: #eee;
+    font-family: verdana;
+    font-size: 0.9em;
+    margin: 3%;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+#header {
+    background-color: #999;
+    color: white;
+}
+
+#main_nav {
+    background-color: #ccc;
+}
+
+#content_container {
+    background: #fff;
+}
+
+#main_content {
+    background: #fff;
+}
+
+#sidebar {
+    background: #fff;
+}
+
+#footer {
+    background-color: #999;
+    color: white;
+}
+
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.site-title {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 0px 0px 10px #000;
+}
+
+
+/*-----------------------------------------------------------------
+    Float
+  -----------------------------------------------------------------*/
+
+p img {
+    float: right;
+    margin-left: 1em;
+}
+
+
+/*-----------------------------------------------------------------
+    Page Layout - Positioning
+  -----------------------------------------------------------------*/
+
+#header {
+    text-align: center;
+    line-height: 175px;
+    height: 175px;
+}
+
+#content_container {
+    overflow: auto;
+}
+
+#main_content {
+    width: 59%;
+    float: left;
+    padding: 3%;
+}
+
+#sidebar {
+    width: 29%;
+    float: right;
+    padding: 3%;
+}
+
+#footer {
+    clear: both;
+    padding: 2% 3%;
+}
+
+
+/*-----------------------------------------------------------------
+    Navigation
+  -----------------------------------------------------------------*/
+
+#main_nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#main_nav li {
+    display: inline;
+    list-style-type: none;
+}
+
+#main_nav li a {
+    display: inline-block;
+    color: #fff;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 1.2em;
+    line-height: 3em;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px #000;
+}
+
+#main_nav li a:hover {
+    background-color: #333;
+}
+
+#main_nav li.active a {
+    color: #666;
+    text-shadow: none;
+}
+
+
+/*-----------------------------------------------------------------
+    Float Background Height Fixes
+  -----------------------------------------------------------------*/
+
+/* first clear all background-colors (set to transparent) */
+.sidebar-layout #content_container,
+.sidebar-layout #main_content,
+.sidebar-layout #sidebar {
+    background-color: transparent;
+}
+
+/* Fix 1: Background gradient */
+
+.sidebar-layout #content_container {
+    background-image: -webkit-linear-gradient(left, #fff, #fff 65%, #eee 65%, #eee 100%);
+    background-image: -moz-linear-gradient(left, #fff, #fff 65%, #eee 65%, #eee 100%);
+    background-image: -ms-linear-gradient(left, #fff, #fff 65%, #eee 65%, #eee 100%);
+    background-image: -o-linear-gradient(left, #fff, #fff 65%, #eee 65%, #eee 100%);
+    background-image: linear-gradient(left, #fff, #fff 65%, #eee 65%, #eee 100%);
+}
+
+
+/*-----------------------------------------------------------------
+    Background Images
+  -----------------------------------------------------------------*/
+
+body {
+    background-image: url("../img/background/bg.png");
+    background-image: url("../img/background/bg-2.png"), url("../img/background/bg.png");
+    background-repeat: no-repeat, repeat;
+}
+
+#header {
+    background-image: url("../img/city-1920-175.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+/*-----------------------------------------------------------------
+    Rounded corners
+  -----------------------------------------------------------------*/
+
+#header {
+    border-radius: 10px 10px 0 0;
+}
+
+#footer {
+    border-radius: 0 0 10px 10px;
+}
+
+p img {
+    border-radius: 10px;
+}
+
+
+/*-----------------------------------------------------------------
+    Fonts
+  -----------------------------------------------------------------*/
+
+@font-face {
+    font-family: "Florante";
+    src: url("../font/florlrg.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../font/lobster.woff2") format("woff2");
+}
+
+body {
+    font-family: "Lobster";
+}
+
+h1, h2, h3 {
+    font-family: "Florante";
+}
