@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>API Employees Webservice</title>
+
+    <!-- CSS - Better using external stylesheet -->
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        table.params {
+            border-collapse: collapse;
+        }
+
+        table.params th,
+        table.params td {
+            border: 1px solid #000;
+            padding: 0.3em 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>API Employees Webservice</h1>
+
+    <hr>
+
+    <h2>Request</h2>
+
+    <h3>URL</h3>
+    <pre><code>
+        GET {url}/api-employees.php?output=xml             /* get one random employee in XML format */
+        GET {url}/api-employees.php?output=json&amp;amount=5           /* get one random employee in JSON format */
+        GET {url}/api-employees.php?output=xml    /* get 5 random employees */
+    </code></pre>
+
+    <h3>Params</h3>
+    <table class="params">
+        <tr>
+            <th>Param Name</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>amount</code></td>
+            <td>The amount of random employees<br>Optional, default amount is 1 employee</td>
+        </tr>
+        <tr>
+            <td><code>output</code></td>
+            <td>Response in XML or JSON format<br>Optional, default is JSON</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Response</h2>
+
+    <h3>XML format</h3>
+    <pre><code>
+      &lt;?xml version=&quot;1.0&quot;?&gt;
+      &lt;employees&gt;
+          &lt;employee&gt;
+              &lt;name&gt;Allistair M. Hays&lt;/name&gt;
+              &lt;company&gt;Nec Ante Blandit Foundation&lt;/company&gt;
+          &lt;/employee&gt;
+          &lt;employee&gt;
+              &lt;name&gt;Alika Donaldson&lt;/name&gt;
+              &lt;company&gt;Egestas Company&lt;/company&gt;
+          &lt;/employee&gt;
+      &lt;/employees&gt;
+    </code></pre>
+
+    <h3>JSON format</h3>
+    <pre><code>
+      {
+          "employees": [
+              {
+                  "name": "Allistair M. Hays",
+                  "company": "Nec Ante Blandit Foundation"
+              },
+              {
+                  "name": "Alika Donaldson",
+                  "company": "Egestas Company"
+              }
+          ]
+      }
+    </code></pre>
+
+</body>
+</html>

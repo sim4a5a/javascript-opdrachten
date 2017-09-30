@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>API Count Tables Webservice</title>
+    
+    <!-- CSS - Better using external stylesheet -->
+    <style>
+        body {
+            font-family: Arial;
+        }
+        
+        table.params {
+            border-collapse: collapse;
+        }
+        
+        table.params th,
+        table.params td {
+            border: 1px solid #000;
+            padding: 0.3em 0.5em;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>API Count Tables Webservice</h1> 
+    
+    <hr>
+    
+    <h2>Request</h2>
+    
+    <h3>URL</h3>
+    <pre><code>
+        GET {url}/api-tables.php?output=xml&amp;table=3                 /* get table of 3 from 1 to 10 in XML format */
+        GET {url}/api-tables.php?output=json&amp;table=7                /* get table of 7 from 1 to 10 in JSON format */
+        GET {url}/api-tables.php?output=xml&amp;table=5&amp;start=3&amp;end=17  /* get table of 5 from 3 to 17 */
+    </code></pre>
+    
+    <h3>Params</h3>
+    <table class="params">
+        <tr>
+            <th>Param Name</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>table</code></td>
+            <td>The count table<br>Optional, default is 1</td>
+        </tr>
+        <tr>
+            <td><code>start</code></td>
+            <td>Start counting<br>Optional, default is 1</td>
+        </tr>
+        <tr>
+            <td><code>end</code></td>
+            <td>End counting<br>Optional, default is 10</td>
+        </tr>
+        <tr>
+            <td><code>output</code></td>
+            <td>Response in XML or JSON format<br>Optional, default is JSON</td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <h2>Response</h2>
+    
+    <h3>XML format</h3>
+    <pre><code>
+      &lt;?xml version=&quot;1.0&quot;?&gt;
+      &lt;results&gt;
+          &lt;result&gt;
+              &lt;number&gt;1&lt;/number&gt;
+              &lt;table&gt;3&lt;/table&gt;
+              &lt;outcome&gt;3&lt;/outcome&gt;
+          &lt;/result&gt;
+          &lt;result&gt;
+              &lt;number&gt;2&lt;/number&gt;
+              &lt;table&gt;3&lt;/table&gt;
+              &lt;outcome&gt;6&lt;/outcome&gt;
+          &lt;/result&gt;
+      &lt;/results&gt;
+    </code></pre>
+    
+    <h3>JSON format</h3>
+    <pre><code>
+      {
+          "results": [
+              {
+                  "number": 1,
+                  "table": 3,
+                  "outcome": 3 
+              },
+              {
+                  "number": 2,
+                  "table": 3,
+                  "outcome": 6
+              }
+          ]
+      }
+    </code></pre>
+    
+</body>
+</html>
