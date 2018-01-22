@@ -40,7 +40,7 @@ function loadView($viewPath, $vars = []) {
    $host = 'localhost';
    $dbname = 'my_web_app';
    $username = 'root';
-   $password = 'Lente_2017';
+   $password = '';
 
    try {
     $connection = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password);
